@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{ background:url('e1.jpg');
+background-size: cover;
+font-family:Arial;
+}
+.wrap{
+max-width:350px;
+border-radius:20px;
+margin:auto;
+background:rgba(0,0,0,0.8);
+box-sizing:border-box;
+padding:40px;
+color:#fff;
+margin-top:100px;
+}
+h2
+{	text-align:center;}
+
+input[type=text],input[type=password],input[type=email]{	
+width:100%;
+box-sizing:border-box;
+padding: 12px 5px;
+background:rgba(0,0,0,0.10);
+outline:none;
+border:none;
+border-bottom:1px solid #fff;
+color:#fff;
+border-radius:5px;
+margin:5px;
+font-weight:bold;
+}
+
+input[type=submit]{
+width:100%;
+box-sizing:border-box;
+padding:10px 0;
+margin-top: 30px;
+outline:none;
+border:none;
+background: #60adde;
+opacity:0.7;
+border-radius:20px;
+font-size:20px;
+color:#fff;
+}
+
+</style>
+<script>
+function validatelname(){
+    var regName = /^[a-zA-Z ]{2,30}$/;
+    var name = document.getElementById('lname').value;
+    if(!regName.test(name))
+{
+        alert('Please enter valid last name ');
+        document.getElementById('lname').focus();
+        return false;
+    }
+    else
+    {
+
+        return true;
+    }
+}
+function validatefname(){
+    var regName = /^[a-zA-Z ]{2,30}$/;
+    var name = document.getElementById('fname').value;
+    if(!regName.test(name))
+{
+        alert('Please enter valid first name ');
+        document.getElementById('fname').focus();
+        return false;
+    }
+    else
+    {
+
+        return true;
+    }
+}
+
+function validateemail(){
+    var regexp = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm;
+    var em = document.getElementById('email').value;
+    if(!regexp.test(em))
+{
+        alert('Please enter valid email');
+        document.getElementById('email').focus();
+        return false;
+    }
+    else
+    {
+
+        return true;
+    }
+}
+function validatenotempty()
+{
+ var x = document.getElementById('fname').value;
+var y = document.getElementById('lname').value;
+ var z = document.getElementById('email').value;
+ var a = document.getElementById('username').value;
+ var b = document.getElementById('pword').value;
+
+ 
+
+  if (x == ""|| y=="" || z== "" || a== ""|| b== "" ) 
+{   alert("All fields must be filled out");
+    return false;
+}
+else 
+{ return true;
+}
+}
+
+
+
+function allvalidations()
+{	
+var a= validatenotempty()	
+var b= validatelname();
+var c= validatefname();
+var d= validateemail();
+if(a==true && c==true && b==true && d==true)
+{	return true;
+}
+else
+{	return false;
+}
+	
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+	<h2> Sign up </h2>
+    <form id="f1">
+    <input type="text" id="fname" placeholder="First Name" />
+    <input type="text" id="lname" placeholder="Last Name" />
+    <input type="email" id="email" placeholder="Email"  />
+     <input type="text" id="username" placeholder="Username" />
+     <input type="password" id="pword" placeholder="Password" />
+     <input type="submit" value="Submit" onclick="return allvalidations()">
+     </form>
+</div>
+
+</body>
+
+</html>
