@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body style="background-color:lightgrey;">
+<script type="text/javascript">
+function test_str() {
+            var str = 
+                document.getElementById("psw").value; 
+            if (!str.match(/[a-z]/g) || !str.match( 
+                    /[A-Z]/g) || !str.match( 
+                    /[0-9]/g) || !str.match( 
+                    /[^a-zA-Z\d]/g) || !(str.length >= 8))
+                alert("Invalid password!\nPassword must contain:\n1)Atleast a capital letter\n2)A small letter\n3)Atleast a digit\n4)A special character\n5)Atleast 8 characters");
+  
+        } 
+</script>
+
+<h2 style="text-align:center;font-family:Comic Sans MS;">Exercise Tracker Login</h2>
+
+<form action="loginval.php" method="POST">
+  <div class="imgcontainer">
+    <img src="loginImg.png" alt="Exercise Tracker" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname" ><b>Username</b></label><br>
+    <input type="text" placeholder="Enter Username" name="uname" style="width:200px;" required><br>
+
+    <label for="psw"><b>Password</b></label><br>
+    <input type="password" placeholder="Enter Password" name="psw" style="width:200px;" id="psw" required><br>
+    <button type="submit" >Login</button><br>
+  
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+	<a href="index.html" class="cancelbtn" style="text-decoration:none">Cancel </a></br>
+
+    
+  </div>
+</form>
+
+</body>
+</html>
