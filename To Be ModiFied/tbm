@@ -2,7 +2,7 @@ React JSX
 
 Components:
 
-The App Itself
+1. The App Itself
 
 <Router>
 <div>
@@ -15,7 +15,7 @@ The App Itself
 </div>
 </Router>
 
-Navbar
+2. Navbar
 
 <nav className="navbar navbar-dark bg-primary navbar-expand-lg">
 <Link to="/user" className="navbar-brand">Excercise Tracker</Link>
@@ -34,7 +34,7 @@ Navbar
 </div>
 </nav>
 
-Exercise List
+3. Exercise List
 
 <div>
 <h3>Exercise LeaderBoard</h3>
@@ -54,7 +54,7 @@ Exercise List
 </table>
 </div>
 
-Edit Exercise
+4. Edit Exercise
 
 <div>
 <h3>Edit Exercise Log</h3>
@@ -116,7 +116,7 @@ onChange={this.onChangeDate}
 </form>
 </div>
 
-Create User
+5. Create User
 
 <div>
 <h2>Why track your exercise?</h2>
@@ -188,7 +188,7 @@ onChange={this.onChangePassword}
 </div>
 </div>
 
-Create Exercise
+6. Create Exercise
 
 <div>
 <h3>Create New Exercise Log</h3>
